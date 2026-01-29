@@ -23,7 +23,7 @@ const Hero = () => {
 
                     <h1 className="text-5xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight">
                         Find Your <span className="text-blue-600 italic">Vision</span> <br />
-                        of a Perfect Stay.
+                        of a Perfect Stay
                     </h1>
 
                     <p className="text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">

@@ -67,7 +67,7 @@ const Gallery = () => {
                         <Images className="w-3 h-3" /> Our Vibrant Spaces
                     </div>
                     <h2 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-4">
-                        A Glimpse of <span className="text-blue-600 italic">Vision.</span>
+                        A Glimpse of <span className="text-blue-600 italic">Vision</span>
                     </h2>
                     <p className="text-slate-500 font-bold max-w-2xl mx-auto">
                         Explore our state-of-the-art facilities, comfortable rooms, and delicious food through our gallery.

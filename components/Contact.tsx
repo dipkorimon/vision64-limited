@@ -15,7 +15,7 @@ const Contact = () => {
                         <MapPin className="w-3 h-3" /> Exact Location
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">
-                        Find Us on <span className="text-blue-600 italic">Google Map.</span>
+                        Find Us on <span className="text-blue-600 italic">Google Map</span>
                     </h2>
                 </div>
 

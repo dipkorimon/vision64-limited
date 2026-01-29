@@ -76,7 +76,7 @@ const FoodMenu = () => {
                         <button
                             key={item.day}
                             onClick={() => setActiveDay(item.day)}
-                            className={`relative px-6 py-3 rounded-2xl text-sm font-black transition-all duration-300 ${
+                            className={`relative px-6 py-3 rounded-2xl text-sm font-black transition-all duration-300 cursor-pointer ${
                                 activeDay === item.day
                                     ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 scale-105'
                                     : 'bg-white text-slate-500 hover:bg-blue-50 border border-slate-100'
@@ -88,7 +88,7 @@ const FoodMenu = () => {
                 </div>
 
                 {/* Menu Cards Container */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 overflow-hidden py-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 overflow-hidden py-4 cursor-pointer">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={activeDay}

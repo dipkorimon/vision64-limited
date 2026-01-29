@@ -70,7 +70,7 @@ const Testimonials = () => {
                         <Star className="w-3 h-3 fill-blue-600" /> Real Student Stories
                     </motion.div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-6">
-                        What Our <span className="text-blue-600">Residents Say.</span>
+                        What Our <span className="text-blue-600">Residents Say</span>
                     </h2>
                 </div>
 
