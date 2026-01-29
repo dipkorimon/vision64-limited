@@ -4,6 +4,7 @@ import Amenities from "@/components/Amenities";
 import FoodMenu from "@/components/FoodMenu";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <FoodMenu />
       <Gallery />
       <Testimonials />
+      <Contact />
     </>
   );
 }
