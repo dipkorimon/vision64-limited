@@ -22,6 +22,7 @@ const Navbar = () => {
         { name: 'Home', href: '/' },
         { name: 'Packages', href: '#packages' },
         { name: 'Amenities', href: '#amenities' },
+        { name: 'Dining', href: '#dining' },
         { name: 'Gallery', href: '#gallery' },
         { name: 'Testimonials', href: '#testimonials' },
         { name: 'Contact', href: '#contact' },
