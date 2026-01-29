@@ -15,8 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vision64 Limited",
-  description: "Premium living spaces for students and pros by Vision 64 Limited.",
+    title: "Vision64 Limited",
+    description: "Premium living spaces for students and pros by Vision 64 Limited.",
+    icons: {
+        icon: '/favicon.png',
+        apple: '/apple-touch-icon.png',
+    },
 };
 
 export default function RootLayout({
