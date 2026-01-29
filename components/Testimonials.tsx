@@ -99,7 +99,7 @@ const Testimonials = () => {
                             </div>
 
                             {/* Comment */}
-                            <p className="text-slate-600 font-bold text-lg leading-relaxed mb-8 relative z-10">
+                            <p className="text-slate-600 font-bold text-md leading-relaxed mb-8 relative z-10">
                                 "{review.comment}"
                             </p>
 
