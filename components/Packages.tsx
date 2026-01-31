@@ -37,7 +37,7 @@ const PackageSection = () => {
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
-                                className={`px-8 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
+                                className={`px-8 py-2.5 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer ${
                                     activeTab === tab
                                         ? 'bg-slate-900 text-white shadow-xl shadow-slate-200'
                                         : 'bg-slate-50 text-slate-500 border border-slate-200 hover:bg-white hover:border-blue-400'
