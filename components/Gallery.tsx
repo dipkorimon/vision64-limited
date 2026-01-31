@@ -5,15 +5,15 @@ import { Images, X, ChevronLeft, ChevronRight, LayoutGrid } from 'lucide-react';
 
 const galleryImages = [
     { id: 1, src: '/hostel_room_interior.jpg', alt: 'Hostel Room Interior', category: 'Rooms' },
-    { id: 2, src: '/images/gallery/food-1.jpg', alt: 'Delicious Meal', category: 'Food' },
-    { id: 3, src: '/images/gallery/common-area-1.jpg', alt: 'Common Lounge Area', category: 'Common Area' },
-    { id: 4, src: '/images/gallery/room-2.jpg', alt: 'Shared Room Setup', category: 'Rooms' },
-    { id: 5, src: '/images/gallery/food-2.jpg', alt: 'Breakfast Spread', category: 'Food' },
-    { id: 6, src: '/images/gallery/study-area.jpg', alt: 'Quiet Study Zone', category: 'Common Area' },
-    { id: 7, src: '/images/gallery/room-3.jpg', alt: 'Cozy Bed Space', category: 'Rooms' },
-    { id: 8, src: '/images/gallery/rooftop-garden.jpg', alt: 'Rooftop Garden View', category: 'Common Area' },
-    { id: 9, src: '/images/gallery/kitchen-area.jpg', alt: 'Modern Kitchen Area', category: 'Food' },
-    { id: 10, src: '/images/gallery/room-4.jpg', alt: 'Private Room with Desk', category: 'Rooms' },
+    { id: 2, src: '/food-1.jpg', alt: 'Delicious Meal', category: 'Food' },
+    { id: 3, src: '/common-area-1.jpg', alt: 'Common Lounge Area', category: 'Common Area' },
+    { id: 4, src: '/room-2.jpg', alt: 'Shared Room Setup', category: 'Rooms' },
+    { id: 5, src: '/food-2.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 6, src: '/study-area.jpg', alt: 'Quiet Study Zone', category: 'Common Area' },
+    { id: 7, src: '/room-3.jpg', alt: 'Cozy Bed Space', category: 'Rooms' },
+    { id: 8, src: '/rooftop-garden.jpg', alt: 'Rooftop Garden View', category: 'Common Area' },
+    { id: 9, src: '/kitchen-area.jpg', alt: 'Modern Kitchen Area', category: 'Food' },
+    { id: 10, src: '/room-4.jpg', alt: 'Private Room with Desk', category: 'Rooms' },
 ];
 
 const categories = ['All', 'Rooms', 'Food', 'Common Area'];
