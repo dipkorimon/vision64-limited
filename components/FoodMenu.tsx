@@ -53,7 +53,7 @@ const FoodMenu = () => {
     const currentMenu = weeklyMenu.find(m => m.day === activeDay);
 
     return (
-        <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <section className="py-24 bg-slate-50 relative overflow-hidden" id="dining">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
 
                 {/* Header */}

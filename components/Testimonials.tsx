@@ -55,7 +55,7 @@ const reviews = [
 
 const Testimonials = () => {
     return (
-        <section className="py-24 bg-slate-50 relative overflow-hidden">
+        <section className="py-24 bg-slate-50 relative overflow-hidden" id="testimonials">
             {/* Background Decoration */}
             <div className="absolute top-0 left-0 w-96 h-96 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
 

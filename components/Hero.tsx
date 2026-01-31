@@ -4,7 +4,7 @@ import { Search, MapPin, Home } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white">
+        <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white" id="home">
             {/* Background Decorative Elements */}
             <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full blur-[100px] opacity-60"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-50 rounded-full blur-[120px] opacity-70"></div>

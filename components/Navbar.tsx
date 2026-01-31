@@ -19,14 +19,38 @@ const Navbar = () => {
     }, []);
 
     const navLinks = [
-        { name: 'Home', href: '/' },
+        { name: 'Home', href: '#home' },
         { name: 'Packages', href: '#packages' },
         { name: 'Amenities', href: '#amenities' },
         { name: 'Dining', href: '#dining' },
         { name: 'Gallery', href: '#gallery' },
         { name: 'Testimonials', href: '#testimonials' },
-        { name: 'Contact', href: '#contact' },
+        { name: 'Contact', href: '#location' },
     ];
+
+    // Smooth Scroll Function
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string, name: string) => {
+        e.preventDefault();
+        setActiveTab(name);
+
+        const targetId = href.replace('#', '');
+        const elem = document.getElementById(targetId);
+
+        if (elem) {
+            const offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = elem.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        } else if (href === '#') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
 
     return (
         <header className="fixed w-full z-50 px-4 md:px-8 py-4 transition-all duration-500 ease-in-out">
@@ -72,7 +96,7 @@ const Navbar = () => {
                                 <Link
                                     key={item.name}
                                     href={item.href}
-                                    onClick={() => setActiveTab(item.name)}
+                                    onClick={(e) => scrollToSection(e, item.href, item.name)}
                                     className="relative px-6 py-2.5 text-sm font-bold transition-all duration-300 group outline-none"
                                 >
                                     {/* Text Animation */}

@@ -18,7 +18,7 @@ const PackageSection = () => {
     const filteredPackages = activeTab === 'All' ? packages : packages.filter(pkg => pkg.category === activeTab);
 
     return (
-        <section className="py-24 bg-white relative overflow-hidden">
+        <section className="py-24 bg-white relative overflow-hidden" id="packages">
             {/* Soft Background Accents */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
 

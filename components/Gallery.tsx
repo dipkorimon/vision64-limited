@@ -58,7 +58,7 @@ const Gallery = () => {
     const currentSelectedImageSrc = filteredImages.find(img => img.id === selectedImage)?.src;
 
     return (
-        <section className="py-24 bg-white relative">
+        <section className="py-24 bg-white relative" id="gallery">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
 
                 {/* Header */}
