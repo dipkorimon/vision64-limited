@@ -120,6 +120,12 @@ const Navbar = () => {
                     </div>
 
                     {/* Gradient Glass Button */}
+                    <a
+                        href="https://wa.me/8801328960996?text=Hello!%20I%20am%20interested%20in%20booking%20a%20seat.%20Could%20you%20please%20provide%20more%20details?"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block"
+                    >
                     <button className="relative group p-[1.5px] overflow-hidden rounded-full transition-all duration-300 active:scale-95 cursor-pointer">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500 to-transparent animate-[spin_4s_linear_infinite]"></div>
                         <div className="relative px-8 py-3 bg-white rounded-full flex items-center gap-2.5 transition-all duration-500 overflow-hidden">
@@ -130,6 +136,7 @@ const Navbar = () => {
                             <div className="absolute inset-0 bg-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
                     </button>
+                    </a>
                 </div>
             </nav>
         </header>
