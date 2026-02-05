@@ -4,19 +4,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Images, X, ChevronLeft, ChevronRight, LayoutGrid } from 'lucide-react';
 
 const galleryImages = [
-    { id: 1, src: '/hostel_room_interior.jpg', alt: 'Hostel Room Interior', category: 'Rooms' },
-    { id: 2, src: '/food-1.jpg', alt: 'Delicious Meal', category: 'Food' },
-    { id: 3, src: '/common-area-1.jpg', alt: 'Common Lounge Area', category: 'Common Area' },
-    { id: 4, src: '/room-2.jpg', alt: 'Shared Room Setup', category: 'Rooms' },
-    { id: 5, src: '/food-2.jpg', alt: 'Breakfast Spread', category: 'Food' },
-    { id: 6, src: '/study-area.jpg', alt: 'Quiet Study Zone', category: 'Common Area' },
-    { id: 7, src: '/room-3.jpg', alt: 'Cozy Bed Space', category: 'Rooms' },
-    { id: 8, src: '/rooftop-garden.jpg', alt: 'Rooftop Garden View', category: 'Common Area' },
-    { id: 9, src: '/kitchen-area.jpg', alt: 'Modern Kitchen Area', category: 'Food' },
-    { id: 10, src: '/room-4.jpg', alt: 'Private Room with Desk', category: 'Rooms' },
+    { id: 1, src: '/food-1.jpg', alt: 'Delicious Meal', category: 'Food' },
+    { id: 2, src: '/food-2.jpg', alt: 'Delicious Meal', category: 'Food' },
+    { id: 3, src: '/food-3.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 4, src: '/food-4.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 5, src: '/food-5.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 6, src: '/food-6.jpg', alt: 'Breakfast Spread', category: 'Food' },
+
+    { id: 7, src: '/room-1.jpg', alt: 'Hostel Room Interior', category: 'Non AC Rooms' },
+    { id: 8, src: '/room-2.jpg', alt: 'Cozy Room View', category: 'Non AC Rooms' },
+    { id: 9, src: '/room-3.jpg', alt: 'Cozy Bed Space', category: 'Non AC Rooms' },
+    { id: 10, src: '/room-4.jpg', alt: 'Private Room with Desk', category: 'Non AC Rooms' },
+    { id: 11, src: '/room-5.jpg', alt: 'Dormitory Style', category: 'Non AC Rooms' },
+    { id: 12, src: '/room-6.jpg', alt: 'Premium Suite', category: 'Non AC Rooms' },
+    { id: 13, src: '/room-7.jpg', alt: 'Standard Single', category: 'Non AC Rooms' },
+    { id: 14, src: '/room-8.jpg', alt: 'Twin Sharing Room', category: 'Non AC Rooms' },
+    { id: 15, src: '/room-9.jpg', alt: 'Deluxe Room', category: 'Non AC Rooms' },
+    { id: 16, src: '/room-10.jpg', alt: 'Modern Living Space', category: 'Non AC Rooms' },
+    { id: 17, src: '/room-11.jpg', alt: 'Minimalist Room', category: 'Non AC Rooms' },
+    { id: 18, src: '/room-12.jpg', alt: 'Spacious Dorm', category: 'Non AC Rooms' },
+
+    { id: 19, src: '/ac-room-1.jpg', alt: 'Premium AC Room', category: 'AC Rooms' },
+    { id: 20, src: '/ac-room-2.jpg', alt: 'Luxury AC Suite', category: 'AC Rooms' },
+    { id: 21, src: '/ac-room-3.jpg', alt: 'AC Deluxe Room', category: 'AC Rooms' },
+    { id: 22, src: '/ac-room-4.jpg', alt: 'Comfort AC Space', category: 'AC Rooms' },
+    { id: 23, src: '/ac-room-5.jpg', alt: 'AC Twin Sharing', category: 'AC Rooms' },
+
+    { id: 25, src: '/common-1.jpg', alt: 'Common Area View 1', category: 'Amenities' },
+    { id: 26, src: '/common-2.jpg', alt: 'Common Area View 2', category: 'Amenities' },
+    { id: 27, src: '/common-3.jpg', alt: 'Common Area View 3', category: 'Amenities' },
+    { id: 28, src: '/common-4.jpg', alt: 'Common Area View 4', category: 'Amenities' },
+    { id: 29, src: '/common-5.jpg', alt: 'Common Area View 5', category: 'Amenities' },
+    { id: 30, src: '/common-6.jpg', alt: 'Common Area View 6', category: 'Amenities' },
+    { id: 31, src: '/common-7.jpg', alt: 'Common Area View 7', category: 'Amenities' },
+    { id: 32, src: '/common-8.jpg', alt: 'Common Area View 8', category: 'Amenities' },
+    { id: 33, src: '/common-9.jpg', alt: 'Common Area View 9', category: 'Amenities' },
+    { id: 34, src: '/common-10.jpg', alt: 'Common Area View 10', category: 'Amenities' },
 ];
 
-const categories = ['All', 'Rooms', 'Food', 'Common Area'];
+const categories = ['All', 'Non AC Rooms', 'AC Rooms', 'Food', 'Amenities'];
 
 const Gallery = () => {
     const [activeCategory, setActiveCategory] = useState('All');
