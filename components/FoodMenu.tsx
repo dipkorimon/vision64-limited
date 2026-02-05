@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Utensils, Sunrise, Sun, Moon, Coffee, ChevronRight } from 'lucide-react';
 
 const weeklyMenu = [
@@ -132,7 +132,7 @@ const FoodMenu = () => {
 };
 
 const MenuCard = ({ time, icon, items, activeColor, shadowColor }: any) => {
-    const variants = {
+    const variants: Variants = {
         initial: { opacity: 0, y: 30, scale: 0.95 },
         animate: {
             opacity: 1,
