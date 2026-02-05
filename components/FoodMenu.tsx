@@ -6,45 +6,45 @@ import { Utensils, Sunrise, Sun, Moon, Coffee, ChevronRight } from 'lucide-react
 const weeklyMenu = [
     {
         day: "Friday",
-        breakfast: "Plain Khichuri, Egg Curry, Pickle, Salad",
-        lunch: "Plain Rice, Chicken Roast, Fish Fry, Mixed Vegetable, Thick Lentil, Salad",
-        dinner: "Beef Tehari, Salad, Cold Drink"
+        breakfast: "Ruti, Gila koliza/Dal",
+        lunch: "Special Menu",
+        dinner: "Rice, Dal, Vegetable, Vorta"
     },
     {
         day: "Saturday",
-        breakfast: "Paratha, Dal Butter, Halwa/Egg, Tea",
-        lunch: "Plain Rice, Fish/Chicken, Vegetable, Vorta, Lentil, Salad",
-        dinner: "Plain Rice, Fish/Chicken, Vegetable, Lentil, Salad"
+        breakfast: "Ruti, Dal/Vaji",
+        lunch: "Rice, Dal, Fish, Vegetable",
+        dinner: "Rice, Dal, Dim, Vaji/Vorta"
     },
     {
         day: "Sunday",
-        breakfast: "Buna Khichuri, Egg Buna, Pickle, Salad",
-        lunch: "Plain Rice, Fish/Chicken, Vegetable, Vorta, Lentil, Salad",
-        dinner: "Plain Rice, Fish/Chicken, Vegetable, Lentil, Salad"
+        breakfast: "Vegetable khicuri",
+        lunch: "Rice, Dal, Fish, Vegetable",
+        dinner: "Rice, Dal, Chicken Curry"
     },
     {
         day: "Monday",
-        breakfast: "Paratha, Mix Vegetable, Egg Buna/Fry, Tea",
-        lunch: "Plain Rice, Fish/Chicken, Vegetable, Vorta, Lentil, Salad",
-        dinner: "Plain Rice, Chicken/Fish, Vegetable, Lentil, Salad"
+        breakfast: "Rice, Vorta, Dal",
+        lunch: "Rice, Dal, Chicken Curry",
+        dinner: "Rice, Dal, Fish, Vegetable"
     },
     {
         day: "Tuesday",
-        breakfast: "Vegetable Khichuri, Egg Buna, Pickle, Salad",
-        lunch: "Plain Rice, Fish/Chicken, Vegetable, Vorta, Lentil, Salad",
-        dinner: "Chicken Biryani, Salad, Cold Drink"
+        breakfast: "Ruti, Vegetable",
+        lunch: "Rice, Dal, Dim, Vaji/Vorta",
+        dinner: "Rice, Dal, Chicken Curry"
     },
     {
         day: "Wednesday",
-        breakfast: "Paratha, Dal Butter, Halwa/Egg, Tea",
-        lunch: "Plain Rice, Fish/Chicken, Vegetable, Vorta, Lentil, Salad",
-        dinner: "Plain Rice, Fish/Chicken, Vegetable, Lentil, Salad"
+        breakfast: "Ruti, Dal/Vaji",
+        lunch: "Rice, Dal, Chicken Curry",
+        dinner: "Rice, Dal, Fish, Vegetable"
     },
     {
         day: "Thursday",
-        breakfast: "Plain Khichuri, Egg Buna, Pickle, Salad",
-        lunch: "Plain Rice, Fish/Chicken, Vegetable, Vorta, Lentil, Salad",
-        dinner: "Plain Rice, Chicken/Fish, Vegetable, Lentil, Salad"
+        breakfast: "Rice, Vorta/Shak, Dal",
+        lunch: "Rice, Dal, Chicken Curry",
+        dinner: "Khicuri, Dim Vuna"
     }
 ];
 
