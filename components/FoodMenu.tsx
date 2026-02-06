@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Utensils, Sunrise, Sun, Moon, Coffee, ChevronRight, Activity, Flame, CheckCircle2 } from 'lucide-react';
+import { Utensils, Sunrise, Sun, Moon, Clock, ChevronRight, Activity, Flame, CheckCircle2 } from 'lucide-react';
 
 const weeklyMenu = [
     {
@@ -50,8 +50,9 @@ const weeklyMenu = [
 
 const FoodMenu = () => {
     const [activeDay, setActiveDay] = useState("Sunday");
-    const [isKitchenOpen, setIsKitchenOpen] = useState(false);
     const currentMenu: any = weeklyMenu.find(m => m.day === activeDay);
+
+    const [kitchenStatus, setKitchenStatus] = useState({ isOpen: false, message: "" });
 
     useEffect(() => {
         const checkKitchenStatus = () => {
@@ -60,21 +61,30 @@ const FoodMenu = () => {
             const minute = now.getMinutes();
             const currentTime = hour * 60 + minute;
 
-            const morningStart = 8 * 60;       // 08:00 AM
-            const morningEnd = 10 * 60;        // 10:00 AM
+            // Time slots in minutes
+            const slots = [
+                { start: 8 * 60, end: 10 * 60, label: "08:00 AM", endLabel: "10:00 AM" },
+                { start: 13 * 60 + 30, end: 17 * 60, label: "01:30 PM", endLabel: "05:00 PM" },
+                { start: 20 * 60, end: 22 * 60 + 30, label: "08:00 PM", endLabel: "10:30 PM" }
+            ];
 
-            const lunchStart = 13 * 60 + 30;   // 01:30 PM (13:30)
-            const lunchEnd = 17 * 60;          // 05:00 PM (17:00)
+            let openSlot = slots.find(slot => currentTime >= slot.start && currentTime < slot.end);
 
-            const dinnerStart = 20 * 60;       // 08:00 PM (20:00)
-            const dinnerEnd = 22 * 60 + 30;    // 10:30 PM (22:30)
+            if (openSlot) {
+                setKitchenStatus({
+                    isOpen: true,
+                    message: `Open until ${openSlot.endLabel}`
+                });
+            } else {
+                // Find next opening slot
+                let nextSlot = slots.find(slot => slot.start > currentTime);
+                if (!nextSlot) nextSlot = slots[0]; // If all slots passed, next is tomorrow's first slot
 
-            const isOpen =
-                (currentTime >= morningStart && currentTime < morningEnd) ||
-                (currentTime >= lunchStart && currentTime < lunchEnd) ||
-                (currentTime >= dinnerStart && currentTime < dinnerEnd);
-
-            setIsKitchenOpen(isOpen);
+                setKitchenStatus({
+                    isOpen: false,
+                    message: `Opens at ${nextSlot.label}`
+                });
+            }
         };
 
         checkKitchenStatus();
@@ -112,9 +122,9 @@ const FoodMenu = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <AnimatePresence mode="wait">
                         <motion.div key={activeDay} className="contents">
-                            <MenuCard time="Breakfast" icon={<Sunrise className="w-6 h-6 text-orange-500" />} data={currentMenu?.breakfast} accentColor="bg-orange-500" isKitchenOpen={isKitchenOpen} />
-                            <MenuCard time="Lunch" icon={<Sun className="w-6 h-6 text-yellow-500" />} data={currentMenu?.lunch} accentColor="bg-yellow-500" isKitchenOpen={isKitchenOpen} />
-                            <MenuCard time="Dinner" icon={<Moon className="w-6 h-6 text-indigo-500" />} data={currentMenu?.dinner} accentColor="bg-indigo-500" isKitchenOpen={isKitchenOpen} />
+                            <MenuCard time="Breakfast" icon={<Sunrise className="w-6 h-6 text-orange-500" />} data={currentMenu?.breakfast} accentColor="bg-orange-500" kitchenStatus={kitchenStatus} />
+                            <MenuCard time="Lunch" icon={<Sun className="w-6 h-6 text-yellow-500" />} data={currentMenu?.lunch} accentColor="bg-yellow-500" kitchenStatus={kitchenStatus} />
+                            <MenuCard time="Dinner" icon={<Moon className="w-6 h-6 text-indigo-500" />} data={currentMenu?.dinner} accentColor="bg-indigo-500" kitchenStatus={kitchenStatus} />
                         </motion.div>
                     </AnimatePresence>
                 </div>
@@ -123,7 +133,7 @@ const FoodMenu = () => {
     );
 };
 
-const MenuCard = ({ time, icon, data, accentColor, isKitchenOpen }: any) => {
+const MenuCard = ({ time, icon, data, accentColor, kitchenStatus }: any) => {
     // String ke split kore array banano
     const itemsList = data?.items?.split(',') || [];
 
@@ -172,19 +182,56 @@ const MenuCard = ({ time, icon, data, accentColor, isKitchenOpen }: any) => {
                 <div className="pt-6 border-t border-slate-50 flex items-center justify-between mt-auto">
                     <div className="flex flex-col">
                         <span
-                            className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Kitchen</span>
+                            className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1 text-left">Kitchen</span>
                         <span
-                            className={`text-[11px] font-bold flex items-center gap-1.5 ${isKitchenOpen ? 'text-green-500' : 'text-red-500'}`}>
+                            className={`text-[11px] font-bold flex items-center gap-1.5 ${kitchenStatus.isOpen ? 'text-green-500' : 'text-red-500'}`}>
                         <span className={`w-2 h-2 rounded-full ${
-                            isKitchenOpen
+                            kitchenStatus.isOpen
                                 ? 'bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]'
-                                : 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.6)]'
+                                : 'bg-red-500'
                         }`}></span>
-                            {isKitchenOpen ? 'Open Now' : 'Closed Now'}
+                                            {kitchenStatus.isOpen ? 'Open Now' : 'Closed Now'}
+                        </span>
+                            <span className="text-[9px] font-medium text-slate-400 mt-0.5">
+                            {kitchenStatus.message}
                         </span>
                     </div>
-                    <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-200">
-                        <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-white transition-all" />
+                    <div className="group/sch relative">
+                        <div className="relative w-12 h-12 flex items-center justify-center cursor-help">
+                            <div className="absolute inset-0 bg-blue-600 rounded-2xl opacity-10" />
+
+                            <div className="relative w-10 h-10 bg-white border border-slate-100 rounded-xl shadow-sm flex items-center justify-center">
+                                <Clock className="w-4 h-4 text-slate-900" />
+                            </div>
+
+                            <div className="absolute -top-1 -right-1 w-3 h-3 border-t-2 border-r-2 border-blue-600/30" />
+                        </div>
+
+                        <div className="absolute bottom-full right-0 mb-4 opacity-0 invisible group-hover/sch:opacity-100 group-hover/sch:visible group-hover/sch:translate-y-0 translate-y-4 transition-all duration-500 z-[100] pointer-events-none">
+                            <div className="bg-white/95 backdrop-blur-xl border border-slate-200 p-5 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] w-60 overflow-hidden relative">
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-blue-50 rounded-full blur-3xl -mr-10 -mt-10 opacity-50" />
+
+                                <div className="relative">
+                                    <div className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-4 border-b border-slate-100 pb-2">Service Hours</div>
+                                    <div className="space-y-4">
+                                        {[
+                                            { label: 'Morning', time: '08:00 AM - 10:00 AM', color: 'text-orange-500', dot: 'bg-orange-500' },
+                                            { label: 'Lunch', time: '01:30 PM - 05:00 PM', color: 'text-blue-600', dot: 'bg-blue-600' },
+                                            { label: 'Dinner', time: '08:00 PM - 10:30 PM', color: 'text-red-600', dot: 'bg-red-600' }
+                                        ].map((slot, idx) => (
+                                            <div key={idx} className="flex flex-col gap-1">
+                                                <div className="flex items-center gap-2">
+                                                    <span className={`w-1.5 h-1.5 rounded-full ${slot.dot}`} />
+                                                    <span className={`text-[10px] font-black uppercase tracking-widest ${slot.color}`}>{slot.label}</span>
+                                                </div>
+                                                <span className="text-[14px] font-bold tracking-tight text-slate-700 pl-3.5">{slot.time}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                                <div className="absolute -bottom-2 right-4 w-4 h-4 bg-white border-r border-b border-slate-200 rotate-45" />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
