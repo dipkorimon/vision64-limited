@@ -21,7 +21,7 @@ const Hero = () => {
                         <span className="text-xs font-bold uppercase tracking-widest">Premium Living in Uttara</span>
                     </div>
 
-                    <h1 className="text-5xl lg:text-7xl font-black text-slate-900 leading-[1.1] tracking-tight">
+                    <h1 className="text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight">
                         Find Your <span className="text-blue-600 italic">Vision</span> <br />
                         of a Perfect Stay
                     </h1>
