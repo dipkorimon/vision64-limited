@@ -37,7 +37,7 @@ const weeklyMenu = [
     {
         day: "Friday",
         breakfast: { items: "Ruti, Gila koliza/Dal", protein: "12g", calories: "350", image: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?q=80&w=800&auto=format&fit=crop" },
-        lunch: { items: "Special Mutton Biryani", protein: "35g", calories: "850", image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop" },
+        lunch: { items: "Beef Curry with Steamed Rice & Lentils (Dal), Traditional Chicken Roast with Fragrant Ghee Polao", protein: "35g", calories: "850", image: "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800&auto=format&fit=crop" },
         dinner: { items: "Rice, Dal, Vegetable, Vorta", protein: "10g", calories: "500", image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800&auto=format&fit=crop" }
     },
     {
