@@ -1,25 +1,123 @@
 'use client';
 import { useState } from 'react';
 import { Check, Zap, Star, Shield, Snowflake } from 'lucide-react';
+import { JSX } from "react/jsx-runtime";
 
 const packages = [
-    { id: 1, category: 'Economic', name: 'Economic Single', room: 'Single Room & Attach Washroom', price: '10,490', originalPrice: '10,990', deposit: '7000', refundable: '5500', icon: <Star className="w-5 h-5" /> },
-    { id: 2, category: 'Elegant', name: 'Elegant Shared-2', room: '2 Seat Single bed & Common Washroom', price: '10,000', originalPrice: '10,490', deposit: '7000', refundable: '5500', icon: <Zap className="w-5 h-5" /> },
-    { id: 3, category: 'Elegant', name: 'Elegant Shared-3', room: '3 Seat Single bed & Common Washroom', price: '9,490', originalPrice: '9,990', deposit: '7000', refundable: '5500', icon: <Zap className="w-5 h-5" /> },
-    { id: 4, category: 'Elegant', name: 'Elegant Balcony', room: '4 Seat Single bed With Balcony & Common Washroom', price: '9,490', originalPrice: '9,990', deposit: '7000', refundable: '5500', popular: true, icon: <Zap className="w-5 h-5" /> },
-    { id: 5, category: 'Elegant', name: 'Elegant Master', room: '4 Seat Single bed With Balcony & Attach Washroom', price: '10,000', originalPrice: '10,490', deposit: '7000', refundable: '5500', icon: <Zap className="w-5 h-5" /> },
-    { id: 6, category: 'AC', name: 'Elegant AC Deck', room: '6, 8 Seat Double Deck Bed & Common Washroom', price: '11,490', originalPrice: '11,990', deposit: '7500', refundable: '6000', icon: <Snowflake className="w-5 h-5" /> },
-    { id: 7, category: 'AC', name: 'Elegant AC Master', room: '8, 10 Seat Double Deck Bed & Attach Washroom', price: '11,490', originalPrice: '11,990', deposit: '7500', refundable: '6000', icon: <Snowflake className="w-5 h-5" /> },
-    { id: 8, category: 'AC', name: 'Premium AC Deck', room: '4 Seat Double Deck Bed & Common Washroom', price: '12,000', originalPrice: '12,490', deposit: '7500', refundable: '6000', icon: <Snowflake className="w-5 h-5" /> },
+    {
+        id: 1,
+        category: 'Economic',
+        name: 'Economic Single',
+        room: 'Single Room & Attach Washroom',
+        price: '10,490',
+        originalPrice: '10,990',
+        deposit: '7000',
+        refundable: '5500',
+        icon: <Star className="w-5 h-5"/>
+    },
+    {
+        id: 2,
+        category: 'Elegant',
+        name: 'Elegant Shared-2',
+        room: '2 Seat Single bed & Common Washroom',
+        price: '10,000',
+        originalPrice: '10,490',
+        deposit: '7000',
+        refundable: '5500',
+        icon: <Zap className="w-5 h-5"/>
+    },
+    {
+        id: 3,
+        category: 'Elegant',
+        name: 'Elegant Shared-3',
+        room: '3 Seat Single bed & Common Washroom',
+        price: '9,490',
+        originalPrice: '9,990',
+        deposit: '7000',
+        refundable: '5500',
+        icon: <Zap className="w-5 h-5"/>
+    },
+    {
+        id: 4,
+        category: 'Elegant',
+        name: 'Elegant Balcony',
+        room: '4 Seat Single bed With Balcony & Common Washroom',
+        price: '9,490',
+        originalPrice: '9,990',
+        deposit: '7000',
+        refundable: '5500',
+        popular: true,
+        icon: <Zap className="w-5 h-5"/>
+    },
+    {
+        id: 5,
+        category: 'Elegant',
+        name: 'Elegant Master',
+        room: '4 Seat Single bed With Balcony & Attach Washroom',
+        price: '10,000',
+        originalPrice: '10,490',
+        deposit: '7000',
+        refundable: '5500',
+        icon: <Zap className="w-5 h-5"/>
+    },
+    {
+        id: 6,
+        category: 'AC',
+        name: 'Elegant AC Deck',
+        room: '6, 8 Seat Double Deck Bed & Common Washroom',
+        price: '11,490',
+        originalPrice: '11,990',
+        deposit: '7500',
+        refundable: '6000',
+        icon: <Snowflake className="w-5 h-5"/>
+    },
+    {
+        id: 7,
+        category: 'AC',
+        name: 'Elegant AC Master',
+        room: '8, 10 Seat Double Deck Bed & Attach Washroom',
+        price: '11,490',
+        originalPrice: '11,990',
+        deposit: '7500',
+        refundable: '6000',
+        icon: <Snowflake className="w-5 h-5"/>
+    },
+    {
+        id: 8,
+        category: 'AC',
+        name: 'Premium AC Deck',
+        room: '4 Seat Double Deck Bed & Common Washroom',
+        price: '12,000',
+        originalPrice: '12,490',
+        deposit: '7500',
+        refundable: '6000',
+        icon: <Snowflake className="w-5 h-5"/>
+    },
 ];
 
 const PackageSection = () => {
     const [activeTab, setActiveTab] = useState('All');
     const filteredPackages = activeTab === 'All' ? packages : packages.filter(pkg => pkg.category === activeTab);
 
+    const handleBookNow = (pkg: { id: number; category: string; name: string; room: string; price: string; originalPrice: string; deposit: string; refundable: string; icon: JSX.Element; popular?: undefined; } | { id: number; category: string; name: string; room: string; price: string; originalPrice: string; deposit: string; refundable: string; popular: boolean; icon: JSX.Element; }) => {
+        const phoneNumber = "8801328960996";
+        const message = `Hello, I am interested in booking a stay at your hostel. 
+
+Package Details:
+-------------------------
+📌 Name: ${pkg.name}
+🏠 Room: ${pkg.room}
+💵 Price: ৳${pkg.price}
+💰 Refundable: ৳${pkg.refundable}
+
+Please let me know the availability and booking process. Thank you!`;
+
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    };
+
     return (
         <section className="py-24 bg-white relative overflow-hidden" id="packages">
-            {/* Soft Background Accents */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-20"></div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -31,7 +129,6 @@ const PackageSection = () => {
                         Choose Your <span className="text-blue-600">Perfect Stay</span>
                     </h2>
 
-                    {/* Tab Selector - Minimal White Style */}
                     <div className="flex flex-wrap justify-center gap-2 mt-10">
                         {['All', 'Economic', 'Elegant', 'AC'].map((tab) => (
                             <button
@@ -49,8 +146,7 @@ const PackageSection = () => {
                     </div>
                 </div>
 
-                {/* Dynamic Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {filteredPackages.map((pkg) => (
                         <div
                             key={pkg.id}
@@ -95,11 +191,13 @@ const PackageSection = () => {
                                 </ul>
                             </div>
 
-                            <button className={`w-full py-4 rounded-2xl font-black text-xs tracking-widest transition-all duration-300 active:scale-95 cursor-pointer ${
-                                pkg.popular
-                                    ? 'bg-blue-600 text-white hover:bg-slate-900 shadow-lg shadow-blue-200'
-                                    : 'bg-slate-900 text-white hover:bg-blue-600 shadow-lg shadow-slate-200'
-                            }`}>
+                            <button
+                                onClick={() => handleBookNow(pkg)}
+                                className={`w-full py-4 rounded-2xl font-black text-xs tracking-widest transition-all duration-300 active:scale-95 cursor-pointer ${
+                                    pkg.popular
+                                        ? 'bg-blue-600 text-white hover:bg-slate-900 shadow-lg shadow-blue-200'
+                                        : 'bg-slate-900 text-white hover:bg-blue-600 shadow-lg shadow-slate-200'
+                                }`}>
                                 BOOK NOW
                             </button>
                         </div>
