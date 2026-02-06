@@ -1,6 +1,12 @@
 import Link from 'next/link';
 import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
 
+const socialLinks = [
+    { Icon: Facebook, url: "https://www.facebook.com/vision64hostel" },
+    { Icon: Instagram, url: "#" },
+    { Icon: Linkedin, url: "#" },
+];
+
 const Footer = () => {
     return (
         <footer className="relative bg-[#020617] text-white pt-20 pb-10 overflow-hidden">
@@ -21,9 +27,15 @@ const Footer = () => {
                             Redefining urban living with secure, comfortable, and premium housing for the next generation of leaders.
                         </p>
                         <div className="flex gap-4">
-                            {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-                                <a key={i} href="#" className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center hover:bg-blue-600 transition-all duration-300 border border-slate-700">
-                                    <Icon size={18} />
+                            {socialLinks.map((item, i) => (
+                                <a
+                                    key={i}
+                                    href={item.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center hover:bg-blue-600 transition-all duration-300 border border-slate-700"
+                                >
+                                    <item.Icon size={18} />
                                 </a>
                             ))}
                         </div>
@@ -71,11 +83,11 @@ const Footer = () => {
                             </div>
                             <div className="flex items-center gap-4 text-slate-400">
                                 <Phone size={20} className="text-blue-500 shrink-0" />
-                                <span className="text-sm">+880 1234 567890</span>
+                                <span className="text-sm">+880 1328 960996</span>
                             </div>
                             <div className="flex items-center gap-4 text-slate-400">
                                 <Mail size={20} className="text-blue-500 shrink-0" />
-                                <span className="text-sm">info@vision64.com</span>
+                                <span className="text-sm">vision64hostel@gmail.com</span>
                             </div>
                         </div>
                     </div>
