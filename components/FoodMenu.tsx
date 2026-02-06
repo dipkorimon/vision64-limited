@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Utensils, Sunrise, Sun, Moon, Coffee, ChevronRight, Activity, Flame, CheckCircle2 } from 'lucide-react';
 
@@ -50,7 +50,37 @@ const weeklyMenu = [
 
 const FoodMenu = () => {
     const [activeDay, setActiveDay] = useState("Sunday");
+    const [isKitchenOpen, setIsKitchenOpen] = useState(false);
     const currentMenu: any = weeklyMenu.find(m => m.day === activeDay);
+
+    useEffect(() => {
+        const checkKitchenStatus = () => {
+            const now = new Date();
+            const hour = now.getHours();
+            const minute = now.getMinutes();
+            const currentTime = hour * 60 + minute;
+
+            const morningStart = 8 * 60;       // 08:00 AM
+            const morningEnd = 10 * 60;        // 10:00 AM
+
+            const lunchStart = 13 * 60 + 30;   // 01:30 PM (13:30)
+            const lunchEnd = 17 * 60;          // 05:00 PM (17:00)
+
+            const dinnerStart = 20 * 60;       // 08:00 PM (20:00)
+            const dinnerEnd = 22 * 60 + 30;    // 10:30 PM (22:30)
+
+            const isOpen =
+                (currentTime >= morningStart && currentTime < morningEnd) ||
+                (currentTime >= lunchStart && currentTime < lunchEnd) ||
+                (currentTime >= dinnerStart && currentTime < dinnerEnd);
+
+            setIsKitchenOpen(isOpen);
+        };
+
+        checkKitchenStatus();
+        const timer = setInterval(checkKitchenStatus, 60000);
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden" id="dining">
@@ -82,9 +112,9 @@ const FoodMenu = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <AnimatePresence mode="wait">
                         <motion.div key={activeDay} className="contents">
-                            <MenuCard time="Breakfast" icon={<Sunrise className="w-6 h-6 text-orange-500" />} data={currentMenu?.breakfast} accentColor="bg-orange-500" />
-                            <MenuCard time="Lunch" icon={<Sun className="w-6 h-6 text-yellow-500" />} data={currentMenu?.lunch} accentColor="bg-yellow-500" />
-                            <MenuCard time="Dinner" icon={<Moon className="w-6 h-6 text-indigo-500" />} data={currentMenu?.dinner} accentColor="bg-indigo-500" />
+                            <MenuCard time="Breakfast" icon={<Sunrise className="w-6 h-6 text-orange-500" />} data={currentMenu?.breakfast} accentColor="bg-orange-500" isKitchenOpen={isKitchenOpen} />
+                            <MenuCard time="Lunch" icon={<Sun className="w-6 h-6 text-yellow-500" />} data={currentMenu?.lunch} accentColor="bg-yellow-500" isKitchenOpen={isKitchenOpen} />
+                            <MenuCard time="Dinner" icon={<Moon className="w-6 h-6 text-indigo-500" />} data={currentMenu?.dinner} accentColor="bg-indigo-500" isKitchenOpen={isKitchenOpen} />
                         </motion.div>
                     </AnimatePresence>
                 </div>
@@ -93,7 +123,7 @@ const FoodMenu = () => {
     );
 };
 
-const MenuCard = ({ time, icon, data, accentColor }: any) => {
+const MenuCard = ({ time, icon, data, accentColor, isKitchenOpen }: any) => {
     // String ke split kore array banano
     const itemsList = data?.items?.split(',') || [];
 
@@ -141,10 +171,16 @@ const MenuCard = ({ time, icon, data, accentColor }: any) => {
 
                 <div className="pt-6 border-t border-slate-50 flex items-center justify-between mt-auto">
                     <div className="flex flex-col">
-                        <span className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Kitchen</span>
-                        <span className="text-[11px] font-bold text-green-500 flex items-center gap-1.5">
-                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
-                            Active Now
+                        <span
+                            className="text-[9px] font-black text-slate-400 uppercase tracking-widest mb-1">Kitchen</span>
+                        <span
+                            className={`text-[11px] font-bold flex items-center gap-1.5 ${isKitchenOpen ? 'text-green-500' : 'text-red-500'}`}>
+                        <span className={`w-2 h-2 rounded-full ${
+                            isKitchenOpen
+                                ? 'bg-green-500 animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]'
+                                : 'bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.6)]'
+                        }`}></span>
+                            {isKitchenOpen ? 'Open Now' : 'Closed Now'}
                         </span>
                     </div>
                     <div className="w-10 h-10 rounded-xl bg-slate-50 flex items-center justify-center group-hover:bg-blue-600 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-blue-200">
