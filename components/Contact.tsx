@@ -44,6 +44,9 @@ const Contact = () => {
                                 <a href="tel:+8801328960996" className="inline-flex items-center gap-2 text-blue-400 font-black hover:text-white transition-colors">
                                     <Phone className="w-4 h-4" /> +880 1328 960996
                                 </a>
+                                <a href="tel:+8801985698402" className="inline-flex items-center gap-2 text-blue-400 font-black hover:text-white transition-colors">
+                                    <Phone className="w-4 h-4" /> +880 1985 698402
+                                </a>
                             </div>
                             <MapPin className="absolute -right-4 -bottom-4 w-32 h-32 text-white/5 rotate-12" />
                         </div>

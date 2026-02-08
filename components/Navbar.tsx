@@ -56,37 +56,22 @@ const Navbar = () => {
             <nav
                 className={`mx-auto max-w-7xl transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] rounded-2xl border
                 ${scrolled
-                    ? "bg-white/40 backdrop-blur-md border-white/20 shadow-lg py-2"
+                    ? "bg-white/70 backdrop-blur-md border-white/20 shadow-lg py-2"
                     : "bg-transparent border-transparent py-4"}`}
             >
                 <div className="px-6 flex justify-between items-center">
 
-                    {/* Brand Logo */}
-                    <Link href="/" className="group flex items-center gap-3 outline-none">
-                        <div className="relative flex items-center justify-center w-12 h-12">
-                            {/* Replaced bg-blue-600 with custom teal */}
-                            <div className="absolute inset-0 bg-[#1aa5c3]/10 rounded-2xl rotate-6 group-hover:rotate-12 group-hover:bg-[#1aa5c3]/20 transition-all duration-500"></div>
-                            <div className="absolute inset-0 bg-[#1aa5c3]/10 rounded-2xl -rotate-6 group-hover:-rotate-12 transition-all duration-500"></div>
-                            <div className="relative w-10 h-10 bg-gradient-to-br from-[#1aa5c3] to-[#1487a1] rounded-xl flex items-center justify-center text-white shadow-[0_8px_16px_rgba(26,165,195,0.3)] group-hover:shadow-[#1aa5c3]/40 group-hover:-translate-y-1 transition-all duration-300">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 transform group-hover:scale-110 transition-transform">
-                                    <path d="M6 3L12 18L18 3"/>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-col -space-y-1">
-                            <span className="text-xl font-extrabold tracking-tighter text-slate-900 flex items-center gap-1">
-                                VISION
-                                <span className="relative inline-block text-[#1aa5c3] italic">
-                                    64
-                                    <span className="absolute -bottom-1 left-0 w-full h-1 bg-[#1aa5c3]/10 -z-10 group-hover:h-2 transition-all"></span>
-                                </span>
-                            </span>
-                            <span className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 group-hover:text-[#1aa5c3] transition-colors">
-                                Limited
-                            </span>
+                    {/* --- Simple Clean Logo Section --- */}
+                    <Link href="/" className="outline-none">
+                        <div className="flex items-center justify-center w-44 h-14">
+                            <img
+                                src="/vision64-logo.png"
+                                alt="Vision 64 Limited"
+                                className="w-full h-full object-contain scale-[4.8]"
+                            />
                         </div>
                     </Link>
+                    {/* ---------------------------------- */}
 
                     {/* Navigation Links */}
                     <div className="hidden md:flex items-center gap-1 bg-slate-50/50 p-1 rounded-2xl border border-slate-100/50">
@@ -108,7 +93,6 @@ const Navbar = () => {
                                         ${isActive ? "scale-100 opacity-100" : "scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100"}`}>
                                     </span>
 
-                                    {/* Indicator Dot */}
                                     <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#1aa5c3] rounded-full transition-all duration-300
                                         ${isActive ? "scale-100" : "scale-0 group-hover:scale-100 delay-100"}`}>
                                     </span>
@@ -127,9 +111,9 @@ const Navbar = () => {
                         <button className="relative group p-[1.5px] overflow-hidden rounded-full transition-all duration-300 active:scale-95 cursor-pointer">
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#1aa5c3] to-transparent animate-[spin_4s_linear_infinite]"></div>
                             <div className="relative px-8 py-3 bg-white rounded-full flex items-center gap-2.5 transition-all duration-500 overflow-hidden">
-                            <span className="relative z-10 font-black text-[13px] tracking-tight text-slate-800 group-hover:text-[#1aa5c3] transition-all duration-300 group-hover:-translate-x-0.5">
-                                BOOK A SEAT
-                            </span>
+                                <span className="relative z-10 font-black text-[13px] tracking-tight text-slate-800 group-hover:text-[#1aa5c3] transition-all duration-300 group-hover:-translate-x-0.5">
+                                    BOOK A SEAT
+                                </span>
                                 <div className="relative z-10 w-1.5 h-1.5 bg-[#1aa5c3] rounded-full group-hover:scale-[1.6] group-hover:shadow-[0_0_10px_rgba(26,165,195,0.5)] transition-all duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)]"></div>
                                 <div className="absolute inset-0 bg-[#1aa5c3]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                             </div>

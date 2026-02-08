@@ -19,9 +19,14 @@ const Footer = () => {
 
                     {/* Brand Section */}
                     <div className="space-y-6">
-                        <Link href="/" className="flex items-center gap-2 group">
-                            <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-xl group-hover:rotate-12 transition-transform duration-300 shadow-lg shadow-blue-500/20">V</div>
-                            <span className="text-2xl font-black tracking-tighter italic">VISION 64</span>
+                        <Link href="/" className="outline-none">
+                            <div className="flex items-center justify-center w-44 h-14">
+                                <img
+                                    src="/vision64-logo.png"
+                                    alt="Vision 64 Limited"
+                                    className="w-full h-full object-contain scale-[3.0]"
+                                />
+                            </div>
                         </Link>
                         <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
                             Redefining urban living with secure, comfortable, and premium housing for the next generation of leaders.
