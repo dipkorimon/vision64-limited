@@ -51,7 +51,7 @@ const Amenities = () => {
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Premium Lifestyle</span>
                         </h3>
                     </div>
-                    <p className="text-slate-500 font-bold text-lg max-w-xs leading-tight border-l-4 border-blue-600 pl-4">
+                    <p className="text-slate-500 font-bold text-lg max-w-xs leading-tight border-l-4 border-[#1aa5c3] pl-4">
                         30+ premium facilities designed for your comfort.
                     </p>
                 </div>
@@ -59,8 +59,8 @@ const Amenities = () => {
                 {/* Main 8 Amenities Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {mainFacilities.map((item, index) => (
-                        <div key={index} className="group p-8 rounded-[2rem] bg-slate-50 border-2 border-slate-100 transition-all duration-500 hover:bg-white hover:border-blue-400 hover:shadow-2xl hover:shadow-blue-100 hover:-translate-y-2">
-                            <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-blue-600 mb-6 shadow-sm border border-slate-100 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 group-hover:rotate-6">
+                        <div key={index} className="group p-8 rounded-[2rem] bg-slate-50 border-2 border-slate-100 transition-all duration-500 hover:bg-white hover:border-[#1aa5c3] hover:shadow-2xl hover:shadow-blue-100 hover:-translate-y-2">
+                            <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center text-[#1aa5c3] mb-6 shadow-sm border border-slate-100 group-hover:bg-[#1aa5c3] group-hover:text-white transition-all duration-500 group-hover:rotate-6">
                                 {item.icon}
                             </div>
                             <h4 className="text-xl font-black text-slate-900 mb-2">{item.title}</h4>
@@ -71,14 +71,14 @@ const Amenities = () => {
 
                 {/* View All Button Section */}
                 <div className="mt-16 p-8 rounded-[2.5rem] bg-slate-900 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative">
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600 opacity-20 blur-[80px] -mr-20 -mt-20"></div>
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-[#1aa5c3] opacity-20 blur-[80px] -mr-20 -mt-20"></div>
                     <div className="relative z-10 text-center md:text-left">
                         <h4 className="text-white text-2xl font-black mb-2 tracking-tight">And many more surprises!</h4>
                         <p className="text-slate-400 font-bold uppercase text-[10px] tracking-[0.2em]">CCTV • Filtered Water • Daily Cleaning • Personal Locker • Dining Room</p>
                     </div>
                     <button
                         onClick={() => setIsOpen(true)}
-                        className="relative z-10 px-8 py-3 bg-blue-600 text-white font-black rounded-2xl hover:bg-white hover:text-black transition-all duration-300 shadow-xl shadow-blue-900/40 active:scale-95 cursor-pointer"
+                        className="relative z-10 px-8 py-3 bg-[#1aa5c3] text-white font-black rounded-2xl hover:bg-white hover:text-black transition-all duration-300 shadow-xl shadow-blue-900/40 active:scale-95 cursor-pointer"
                     >
                         VIEW ALL 30+ FACILITIES
                     </button>
@@ -108,7 +108,7 @@ const Amenities = () => {
                                 <div className="sticky top-0 bg-white border-b border-slate-100 p-8 flex justify-between items-center z-10">
                                     <div>
                                         <h3 className="text-2xl font-black text-slate-900">All Premium Facilities</h3>
-                                        <p className="text-blue-600 font-bold text-sm uppercase tracking-widest">Vision 64 Limited • Uttara Branch</p>
+                                        <p className="text-[#1aa5c3] font-bold text-sm uppercase tracking-widest">Vision 64 Limited • Uttara Branch</p>
                                     </div>
                                     <button
                                         onClick={() => setIsOpen(false)}

@@ -89,11 +89,11 @@ const Gallery = () => {
 
                 {/* Header */}
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-blue-100">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-[#1aa5c3] text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-blue-100">
                         <Images className="w-3 h-3" /> Our Vibrant Spaces
                     </div>
                     <h2 className="text-5xl md:text-7xl font-black text-slate-900 tracking-tighter mb-4">
-                        A Glimpse of <span className="text-blue-600 italic">Vision</span>
+                        A Glimpse of <span className="text-[#1aa5c3] italic">Vision</span>
                     </h2>
                     <p className="text-slate-500 font-bold max-w-2xl mx-auto">
                         Explore our state-of-the-art facilities, comfortable rooms, and delicious food through our gallery.
@@ -112,7 +112,7 @@ const Gallery = () => {
                             {activeCategory === category && (
                                 <motion.div
                                     layoutId="activeCategory"
-                                    className="absolute inset-0 bg-blue-600 shadow-xl shadow-blue-200"
+                                    className="absolute inset-0 bg-[#1aa5c3] shadow-xl shadow-blue-200"
                                     transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                                 />
                             )}

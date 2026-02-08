@@ -65,12 +65,12 @@ const Testimonials = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-4 shadow-sm border border-blue-50"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#1aa5c3] text-[10px] font-black uppercase tracking-[0.2em] mb-4 shadow-sm border border-blue-50"
                     >
-                        <Star className="w-3 h-3 fill-blue-600" /> Real Student Stories
+                        <Star className="w-3 h-3 fill-[#1aa5c3]" /> Real Student Stories
                     </motion.div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-6">
-                        What Our <span className="text-blue-600">Residents Say</span>
+                        What Our <span className="text-[#1aa5c3]">Residents Say</span>
                     </h2>
                 </div>
 
@@ -105,13 +105,13 @@ const Testimonials = () => {
 
                             {/* Profile */}
                             <div className="flex items-center gap-4 mt-auto border-t border-slate-50 pt-6">
-                                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600">
+                                <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-[#1aa5c3]">
                                     <UserCircle2 className="w-8 h-8" />
                                 </div>
                                 <div>
                                     <h4 className="text-slate-900 font-black text-base flex items-center gap-2">
                                         {review.name}
-                                        <CheckCircle2 className="w-4 h-4 text-blue-500" />
+                                        <CheckCircle2 className="w-4 h-4 text-[#1aa5c3]" />
                                     </h4>
                                     <p className="text-slate-400 font-bold text-xs uppercase tracking-widest">{review.role}</p>
                                 </div>

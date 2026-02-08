@@ -5,24 +5,24 @@ import { Search, MapPin, Home } from 'lucide-react';
 const Hero = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-white" id="home">
-            {/* Background Decorative Elements */}
-            <div className="absolute top-20 left-10 w-64 h-64 bg-blue-100 rounded-full blur-[100px] opacity-60"></div>
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-50 rounded-full blur-[120px] opacity-70"></div>
+            {/* Background Decorative Elements - Replaced with teal tints */}
+            <div className="absolute top-20 left-10 w-64 h-64 bg-[#1aa5c3]/10 rounded-full blur-[100px] opacity-60"></div>
+            <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#1aa5c3]/5 rounded-full blur-[120px] opacity-70"></div>
 
             <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
 
                 {/* Left Content */}
                 <div className="space-y-8 text-center lg:text-left">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-600 animate-fade-in">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#186f86] animate-fade-in">
                         <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#186f86] opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-[#186f86]"></span>
                         </span>
                         <span className="text-xs font-bold uppercase tracking-widest">Premium Living in Uttara</span>
                     </div>
 
                     <h1 className="text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight">
-                        Find Your <span className="text-blue-600 italic">Vision</span> <br />
+                        Find Your <span className="text-[#1aa5c3] italic">Vision</span> <br />
                         of a Perfect Stay
                     </h1>
 
@@ -33,14 +33,14 @@ const Hero = () => {
                     {/* Modern Search Bar */}
                     <div className="relative max-w-2xl bg-white p-2 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 flex flex-col md:flex-row items-center gap-2">
                         <div className="flex-1 flex items-center gap-3 px-4 py-2 border-r border-slate-100 last:border-0 w-full">
-                            <MapPin className="text-blue-500" size={20} />
+                            <MapPin className="text-[#1aa5c3]" size={20} />
                             <div className="flex flex-col">
                                 <span className="text-[10px] uppercase font-bold text-slate-400">Location</span>
                                 <input type="text" placeholder="Uttara Sector 10" className="text-sm font-semibold text-slate-800 outline-none w-full bg-transparent" />
                             </div>
                         </div>
                         <div className="flex-1 flex items-center gap-3 px-4 py-2 w-full">
-                            <Home className="text-blue-500" size={20} />
+                            <Home className="text-[#1aa5c3]" size={20} />
                             <div className="flex flex-col">
                                 <span className="text-[10px] uppercase font-bold text-slate-400">Room Type</span>
                                 <select className="text-sm font-semibold text-slate-800 outline-none w-full bg-transparent appearance-none">
@@ -49,7 +49,8 @@ const Hero = () => {
                                 </select>
                             </div>
                         </div>
-                        <button className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-2xl transition-all shadow-lg shadow-blue-200 group w-full md:w-auto flex justify-center cursor-pointer">
+                        {/* Search button matches your theme now */}
+                        <button className="bg-[#186f86] hover:bg-[#186f86] text-white p-4 rounded-2xl transition-all shadow-lg shadow-[#186f86]/20 group w-full md:w-auto flex justify-center cursor-pointer">
                             <Search size={22} className="group-hover:scale-110 transition-transform" />
                         </button>
                     </div>
@@ -80,7 +81,6 @@ const Hero = () => {
                     {/* Floating Badge */}
                     <div className="absolute -bottom-6 -left-6 z-20 bg-white p-6 rounded-3xl shadow-xl flex items-center gap-4 border border-slate-50 animate-bounce-slow">
                         <div className="group relative w-12 h-12 bg-green-100 rounded-2xl flex items-center justify-center transition-all duration-300 hover:bg-green-200 hover:scale-110 shadow-sm hover:shadow-green-200/50">
-                            {/* SVG Icon for better scaling and sharpness */}
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"

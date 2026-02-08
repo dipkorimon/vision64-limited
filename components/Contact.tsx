@@ -11,11 +11,11 @@ const Contact = () => {
 
                 {/* Header */}
                 <div className="mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-blue-100">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-[#1aa5c3] text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-blue-100">
                         <MapPin className="w-3 h-3" /> Exact Location
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">
-                        Find Us on <span className="text-blue-600 italic">Google Map</span>
+                        Find Us on <span className="text-[#1aa5c3] italic">Google Map</span>
                     </h2>
                 </div>
 
@@ -27,7 +27,7 @@ const Contact = () => {
                             whileHover={{ y: -5 }}
                             className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm"
                         >
-                            <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                            <div className="w-12 h-12 rounded-2xl bg-[#1aa5c3] flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
                                 <MapPin className="w-6 h-6" />
                             </div>
                             <h4 className="text-xl font-black text-slate-900 mb-2">Hostel Address</h4>
