@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="absolute top-20 left-10 w-64 h-64 bg-[#1aa5c3]/10 rounded-full blur-[100px] opacity-60"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#1aa5c3]/5 rounded-full blur-[120px] opacity-70"></div>
 
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+            <div className="max-w-8xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
 
                 {/* Left Content */}
                 <div className="space-y-8 text-center lg:text-left">
