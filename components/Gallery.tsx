@@ -4,12 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Images, X, ChevronLeft, ChevronRight, LayoutGrid } from 'lucide-react';
 
 const galleryImages = [
-    { id: 1, src: '/food-1.jpg', alt: 'Delicious Meal', category: 'Food' },
-    { id: 2, src: '/food-2.jpg', alt: 'Delicious Meal', category: 'Food' },
-    { id: 3, src: '/food-3.jpg', alt: 'Breakfast Spread', category: 'Food' },
-    { id: 4, src: '/food-4.jpg', alt: 'Breakfast Spread', category: 'Food' },
-    { id: 5, src: '/food-5.jpg', alt: 'Breakfast Spread', category: 'Food' },
-    { id: 6, src: '/food-6.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 27, src: '/common-3.jpg', alt: 'Common Area View 3', category: 'Amenities' },
+    { id: 25, src: '/common-1.jpg', alt: 'Common Area View 1', category: 'Amenities' },
+    { id: 29, src: '/common-5.jpg', alt: 'Common Area View 5', category: 'Amenities' },
+    { id: 33, src: '/common-9.jpg', alt: 'Common Area View 9', category: 'Amenities' },
+    { id: 31, src: '/common-7.jpg', alt: 'Common Area View 7', category: 'Amenities' },
+    { id: 32, src: '/common-8.jpg', alt: 'Common Area View 8', category: 'Amenities' },
+    { id: 28, src: '/common-4.jpg', alt: 'Common Area View 4', category: 'Amenities' },
+    { id: 30, src: '/common-6.jpg', alt: 'Common Area View 6', category: 'Amenities' },
+    { id: 34, src: '/common-10.jpg', alt: 'Common Area View 10', category: 'Amenities' },
+
 
     { id: 7, src: '/room-1.jpg', alt: 'Hostel Room Interior', category: 'Non AC Rooms' },
     { id: 8, src: '/room-2.jpg', alt: 'Cozy Room View', category: 'Non AC Rooms' },
@@ -29,17 +33,21 @@ const galleryImages = [
     { id: 21, src: '/ac-room-3.jpg', alt: 'AC Deluxe Room', category: 'AC Rooms' },
     { id: 22, src: '/ac-room-4.jpg', alt: 'Comfort AC Space', category: 'AC Rooms' },
     { id: 23, src: '/ac-room-5.jpg', alt: 'AC Twin Sharing', category: 'AC Rooms' },
+    { id: 1, src: '/food-1.jpg', alt: 'Delicious Meal', category: 'Food' },
+    { id: 2, src: '/food-2.jpg', alt: 'Delicious Meal', category: 'Food' },
+    { id: 3, src: '/food-3.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 4, src: '/food-4.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 5, src: '/food-5.jpg', alt: 'Breakfast Spread', category: 'Food' },
+    { id: 6, src: '/food-6.jpg', alt: 'Breakfast Spread', category: 'Food' },
 
-    { id: 25, src: '/common-1.jpg', alt: 'Common Area View 1', category: 'Amenities' },
+
     { id: 26, src: '/common-2.jpg', alt: 'Common Area View 2', category: 'Amenities' },
-    { id: 27, src: '/common-3.jpg', alt: 'Common Area View 3', category: 'Amenities' },
-    { id: 28, src: '/common-4.jpg', alt: 'Common Area View 4', category: 'Amenities' },
-    { id: 29, src: '/common-5.jpg', alt: 'Common Area View 5', category: 'Amenities' },
-    { id: 30, src: '/common-6.jpg', alt: 'Common Area View 6', category: 'Amenities' },
-    { id: 31, src: '/common-7.jpg', alt: 'Common Area View 7', category: 'Amenities' },
-    { id: 32, src: '/common-8.jpg', alt: 'Common Area View 8', category: 'Amenities' },
-    { id: 33, src: '/common-9.jpg', alt: 'Common Area View 9', category: 'Amenities' },
-    { id: 34, src: '/common-10.jpg', alt: 'Common Area View 10', category: 'Amenities' },
+
+
+
+
+
+
 ];
 
 const categories = ['All', 'Non AC Rooms', 'AC Rooms', 'Food', 'Amenities'];
