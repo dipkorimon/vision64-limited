@@ -14,7 +14,6 @@ const galleryImages = [
     { id: 30, src: '/common-6.jpg', alt: 'Common Area View 6', category: 'Amenities' },
     { id: 34, src: '/common-10.jpg', alt: 'Common Area View 10', category: 'Amenities' },
 
-
     { id: 7, src: '/room-1.jpg', alt: 'Hostel Room Interior', category: 'Non AC Rooms' },
     { id: 8, src: '/room-2.jpg', alt: 'Cozy Room View', category: 'Non AC Rooms' },
     { id: 9, src: '/room-3.jpg', alt: 'Cozy Bed Space', category: 'Non AC Rooms' },
@@ -40,14 +39,7 @@ const galleryImages = [
     { id: 5, src: '/food-5.jpg', alt: 'Breakfast Spread', category: 'Food' },
     { id: 6, src: '/food-6.jpg', alt: 'Breakfast Spread', category: 'Food' },
 
-
     { id: 26, src: '/common-2.jpg', alt: 'Common Area View 2', category: 'Amenities' },
-
-
-
-
-
-
 ];
 
 const categories = ['All', 'Non AC Rooms', 'AC Rooms', 'Food', 'Amenities'];
