@@ -67,7 +67,7 @@ const Testimonials = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#85bc44] text-[10px] font-black uppercase tracking-[0.2em] mb-4 shadow-sm"
                     >
-                        <Star className="w-3 h-3 fill-[#85bc44]" /> Real Student Stories
+                        <Star className="w-3 h-3 fill-[#85bc44]" /> Real Residents Stories
                     </motion.div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-6">
                         What Our <span className="text-[#85bc44]">Residents Say</span>
