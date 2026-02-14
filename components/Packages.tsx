@@ -12,6 +12,7 @@ const packages = [
         price: '10,490',
         originalPrice: '10,990',
         deposit: '7000',
+        admin_charge: '1500',
         refundable: '5500',
         icon: <Star className="w-5 h-5"/>
     },
@@ -23,6 +24,7 @@ const packages = [
         price: '10,000',
         originalPrice: '10,490',
         deposit: '7000',
+        admin_charge: '1500',
         refundable: '5500',
         icon: <Zap className="w-5 h-5"/>
     },
@@ -34,6 +36,7 @@ const packages = [
         price: '9,490',
         originalPrice: '9,990',
         deposit: '7000',
+        admin_charge: '1500',
         refundable: '5500',
         icon: <Zap className="w-5 h-5"/>
     },
@@ -45,6 +48,7 @@ const packages = [
         price: '9,490',
         originalPrice: '9,990',
         deposit: '7000',
+        admin_charge: '1500',
         refundable: '5500',
         popular: true,
         icon: <Zap className="w-5 h-5"/>
@@ -57,6 +61,7 @@ const packages = [
         price: '10,000',
         originalPrice: '10,490',
         deposit: '7000',
+        admin_charge: '1500',
         refundable: '5500',
         icon: <Zap className="w-5 h-5"/>
     },
@@ -68,6 +73,7 @@ const packages = [
         price: '11,490',
         originalPrice: '11,990',
         deposit: '7500',
+        admin_charge: '1500',
         refundable: '6000',
         icon: <Snowflake className="w-5 h-5"/>
     },
@@ -79,6 +85,7 @@ const packages = [
         price: '11,490',
         originalPrice: '11,990',
         deposit: '7500',
+        admin_charge: '1500',
         refundable: '6000',
         icon: <Snowflake className="w-5 h-5"/>
     },
@@ -90,6 +97,7 @@ const packages = [
         price: '12,000',
         originalPrice: '12,490',
         deposit: '7500',
+        admin_charge: '1500',
         refundable: '6000',
         icon: <Snowflake className="w-5 h-5"/>
     },
@@ -122,11 +130,11 @@ Please let me know the availability and booking process. Thank you!`;
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#1aa5c3] text-[10px] font-black tracking-[0.2em] uppercase">
+                    <div className="inline-block px-4 py-1.5 mb-4 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#85bc44] text-[10px] font-black tracking-[0.2em] uppercase">
                         Pricing Plans
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">
-                        Choose Your <span className="text-[#1aa5c3]">Perfect Stay</span>
+                        Choose Your <span className="text-[#85bc44]">Perfect Stay</span>
                     </h2>
 
                     <div className="flex flex-wrap justify-center gap-2 mt-10">
@@ -137,7 +145,7 @@ Please let me know the availability and booking process. Thank you!`;
                                 className={`px-8 py-2.5 rounded-full text-sm font-bold transition-all duration-300 cursor-pointer ${
                                     activeTab === tab
                                         ? 'bg-slate-900 text-white shadow-xl shadow-slate-200'
-                                        : 'bg-slate-50 text-slate-500 border border-slate-200 hover:bg-white hover:border-[#1aa5c3]'
+                                        : 'bg-slate-50 text-slate-500 border border-slate-200 hover:bg-white hover:border-[#85bc44]'
                                 }`}
                             >
                                 {tab}
@@ -157,13 +165,13 @@ Please let me know the availability and booking process. Thank you!`;
                             }`}
                         >
                             {pkg.popular && (
-                                <div className="absolute top-0 right-0 bg-[#1aa5c3] text-white text-[9px] font-black px-4 py-1.5 rounded-bl-2xl uppercase tracking-tighter">
+                                <div className="absolute top-0 right-0 bg-[#85bc44] text-white text-[9px] font-black px-4 py-1.5 rounded-bl-2xl uppercase tracking-tighter">
                                     Best Value
                                 </div>
                             )}
 
                             <div>
-                                <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-[#1aa5c3] mb-6 group-hover:bg-[#1aa5c3] group-hover:text-white transition-all duration-500">
+                                <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-[#85bc44] mb-6 group-hover:bg-[#85bc44] group-hover:text-white transition-all duration-500">
                                     {pkg.icon}
                                 </div>
                                 <h4 className="text-slate-900 text-xl font-black mb-1 tracking-tight">{pkg.name}</h4>
@@ -174,6 +182,9 @@ Please let me know the availability and booking process. Thank you!`;
                                         <span className="text-3xl font-black text-slate-900 font-mono">৳{pkg.price}</span>
                                         <span className="text-slate-400 line-through text-xs italic">৳{pkg.originalPrice}</span>
                                     </div>
+                                    <p className="text-[10px] text-[#1aa5c3] font-bold mt-1 uppercase tracking-tighter">
+                                        Admin Charge: ৳{pkg.admin_charge}
+                                    </p>
                                     <p className="text-[10px] text-[#1aa5c3] font-bold mt-1 uppercase tracking-tighter">
                                         Refundable: ৳{pkg.refundable}
                                     </p>
@@ -195,8 +206,8 @@ Please let me know the availability and booking process. Thank you!`;
                                 onClick={() => handleBookNow(pkg)}
                                 className={`w-full py-4 rounded-2xl font-black text-xs tracking-widest transition-all duration-300 active:scale-95 cursor-pointer ${
                                     pkg.popular
-                                        ? 'bg-[#1aa5c3] text-white hover:bg-slate-900 shadow-lg shadow-[#1aa5c3]/20'
-                                        : 'bg-slate-900 text-white hover:bg-[#1aa5c3] shadow-lg shadow-slate-200'
+                                        ? 'bg-[#85bc44] text-white hover:bg-slate-900 shadow-lg shadow-[#1aa5c3]/20'
+                                        : 'bg-slate-900 text-white hover:bg-[#85bc44] shadow-lg shadow-slate-200'
                                 }`}>
                                 BOOK NOW
                             </button>

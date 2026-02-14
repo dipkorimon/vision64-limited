@@ -12,7 +12,7 @@ const mainFacilities = [
     { icon: <Utensils className="w-6 h-6" />, title: "3 Times Food", desc: "Healthy & delicious meals" },
     { icon: <Wifi className="w-6 h-6" />, title: "High Speed WiFi", desc: "Buffer-free 5G internet" },
     { icon: <ShieldCheck className="w-6 h-6" />, title: "24/7 Security", desc: "Professional guard & CCTV" },
-    { icon: <WashingMachine className="w-6 h-6" />, title: "Laundry Service", desc: "Fresh clothes everyday" },
+    { icon: <WashingMachine className="w-6 h-6" />, title: "Washing Service", desc: "Fresh clothes everyday" },
     { icon: <ThermometerSun className="w-6 h-6" />, title: "Full AC Rooms", desc: "Climate controlled living" },
     { icon: <Zap className="w-6 h-6" />, title: "Power Backup", desc: "24/7 Generator support" },
     { icon: <BookOpen className="w-6 h-6" />, title: "Study Space", desc: "Quiet study space for focus" },
@@ -45,10 +45,10 @@ const Amenities = () => {
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div className="max-w-2xl">
-                        <h2 className="text-blue-600 font-black text-sm uppercase tracking-[0.3em] mb-4">World Class Facilities</h2>
+                        <h2 className="text-[#85bc44] font-black text-4xl uppercase tracking-[0.3em] mb-3">Facilities</h2>
                         <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">
                             Everything You Need for a <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Premium Lifestyle</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#85bc44] to-[#b4d98c]">Better Lifestyle</span>
                         </h3>
                     </div>
                     <p className="text-slate-500 font-bold text-lg max-w-xs leading-tight border-l-4 border-[#1aa5c3] pl-4">
@@ -78,7 +78,7 @@ const Amenities = () => {
                     </div>
                     <button
                         onClick={() => setIsOpen(true)}
-                        className="relative z-10 px-8 py-3 bg-[#1aa5c3] text-white font-black rounded-2xl hover:bg-white hover:text-black transition-all duration-300 shadow-xl shadow-blue-900/40 active:scale-95 cursor-pointer"
+                        className="relative z-10 px-8 py-3 bg-[#85bc44] text-white font-black rounded-2xl hover:bg-white hover:text-black transition-all duration-300 shadow-xl shadow-blue-900/40 active:scale-95 cursor-pointer"
                     >
                         VIEW ALL 30+ FACILITIES
                     </button>

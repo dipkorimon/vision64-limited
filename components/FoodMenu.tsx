@@ -56,12 +56,12 @@ const FoodMenu = () => {
         <section className="py-24 bg-slate-50 relative overflow-hidden" id="dining">
             <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-[#1aa5c3] text-xs font-black uppercase tracking-widest mb-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#85bc44] text-xs font-black uppercase tracking-widest mb-4">
                         <Utensils className="w-4 h-4" />
                         Weekly Meal Plan
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-6">
-                        Delicious & <span className="text-[#1aa5c3]">Healthy Food</span>
+                        Delicious & <span className="text-[#85bc44]">Healthy Food</span>
                     </h2>
                 </div>
 
@@ -71,7 +71,7 @@ const FoodMenu = () => {
                             key={item.day}
                             onClick={() => setActiveDay(item.day)}
                             className={`px-6 py-3 rounded-2xl text-sm font-black transition-all duration-300 cursor-pointer ${
-                                activeDay === item.day ? 'bg-[#1aa5c3] text-white shadow-xl scale-105' : 'bg-white text-slate-500 border border-slate-100 hover:bg-blue-50'
+                                activeDay === item.day ? 'bg-[#85bc44] text-white shadow-xl scale-105' : 'bg-white text-slate-500 border border-slate-100 hover:bg-blue-50'
                             }`}
                         >
                             {item.day}

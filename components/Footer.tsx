@@ -3,8 +3,8 @@ import { Mail, MapPin, Phone, Facebook, Instagram, Linkedin } from 'lucide-react
 
 const socialLinks = [
     { Icon: Facebook, url: "https://www.facebook.com/vision64hostel" },
-    { Icon: Instagram, url: "#" },
-    { Icon: Linkedin, url: "#" },
+    { Icon: Instagram, url: "https://www.instagram.com/vision64limited" },
+    { Icon: Linkedin, url: "https://www.linkedin.com/company/vision64hostel/" },
 ];
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
 
                     {/* Brand Section */}
-                    <div className="space-y-6">
+                    <div className="space-y-6 mr-3">
                         <Link href="/" className="outline-none">
                             <div className="flex items-center justify-center w-44 h-14">
                                 <img
@@ -38,7 +38,7 @@ const Footer = () => {
                                     href={item.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center hover:bg-blue-600 transition-all duration-300 border border-slate-700"
+                                    className="w-10 h-10 rounded-full bg-slate-800/50 flex items-center justify-center text-white hover:bg-blue-600 transition-all duration-300 border border-slate-700"
                                 >
                                     <item.Icon size={18} />
                                 </a>
@@ -91,6 +91,10 @@ const Footer = () => {
                                 <span className="text-sm">+880 1328 960996</span>
                             </div>
                             <div className="flex items-center gap-4 text-slate-400">
+                                <Phone size={20} className="text-blue-500 shrink-0" />
+                                <span className="text-sm">+880 1985 698402</span>
+                            </div>
+                            <div className="flex items-center gap-4 text-slate-400">
                                 <Mail size={20} className="text-blue-500 shrink-0" />
                                 <span className="text-sm">vision64hostel@gmail.com</span>
                             </div>
@@ -101,7 +105,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="mt-20 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-500 text-xs">
-                        © {new Date().getFullYear()} <span className="text-slate-300 font-semibold">Vision 64 Limited</span>. All rights reserved.
+                        © {new Date().getFullYear()} <span className="text-slate-300 font-semibold">Vision64 Limited</span>. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
                         <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Designed for Excellence</span>

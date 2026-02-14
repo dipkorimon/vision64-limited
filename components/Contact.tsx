@@ -11,11 +11,11 @@ const Contact = () => {
 
                 {/* Header */}
                 <div className="mb-16">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-[#1aa5c3] text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-blue-100">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-[#85bc44] text-[10px] font-black uppercase tracking-[0.2em] mb-4 border border-blue-100">
                         <MapPin className="w-3 h-3" /> Exact Location
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">
-                        Find Us on <span className="text-[#1aa5c3] italic">Google Map</span>
+                        Find Us on <span className="text-[#85bc44] italic">Google Map</span>
                     </h2>
                 </div>
 
@@ -27,7 +27,7 @@ const Contact = () => {
                             whileHover={{ y: -5 }}
                             className="bg-slate-50 p-8 rounded-[2.5rem] border border-slate-100 shadow-sm"
                         >
-                            <div className="w-12 h-12 rounded-2xl bg-[#1aa5c3] flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
+                            <div className="w-12 h-12 rounded-2xl bg-[#85bc44] flex items-center justify-center text-white mb-6 shadow-lg shadow-blue-200">
                                 <MapPin className="w-6 h-6" />
                             </div>
                             <h4 className="text-xl font-black text-slate-900 mb-2">Hostel Address</h4>
@@ -41,10 +41,10 @@ const Contact = () => {
                             <div className="relative z-10">
                                 <h4 className="text-xl font-black mb-2 italic">Need Directions?</h4>
                                 <p className="text-slate-400 text-sm font-medium mb-6">Call us if you're having trouble finding the location.</p>
-                                <a href="tel:+8801328960996" className="inline-flex items-center gap-2 text-blue-400 font-black hover:text-white transition-colors">
+                                <a href="tel:+8801328960996" className="inline-flex items-center gap-2 text-[#1aa5c3] font-black hover:text-white transition-colors">
                                     <Phone className="w-4 h-4" /> +880 1328 960996
                                 </a>
-                                <a href="tel:+8801985698402" className="inline-flex items-center gap-2 text-blue-400 font-black hover:text-white transition-colors">
+                                <a href="tel:+8801985698402" className="inline-flex items-center gap-2 text-[#1aa5c3] font-black hover:text-white transition-colors">
                                     <Phone className="w-4 h-4" /> +880 1985 698402
                                 </a>
                             </div>
@@ -69,7 +69,7 @@ const Contact = () => {
                             {/* Overlay Badge */}
                             <div className="absolute top-6 left-6 right-6 flex justify-between items-center pointer-events-none">
                                 <div className="bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl border border-white/50">
-                                    <p className="text-[10px] font-black text-blue-600 uppercase tracking-widest">Marked Location</p>
+                                    <p className="text-[10px] font-black text-[#85bc44] uppercase tracking-widest">Marked Location</p>
                                     <p className="text-sm font-black text-slate-900">Vision64 Limited (House-23)</p>
                                 </div>
                             </div>

@@ -67,7 +67,7 @@ const Navbar = () => {
                             <img
                                 src="/vision64-logo.png"
                                 alt="Vision 64 Limited"
-                                className="w-full h-full object-contain scale-[4.8]"
+                                className="w-full h-full object-contain scale-[4.0]"
                             />
                         </div>
                     </Link>
@@ -85,7 +85,7 @@ const Navbar = () => {
                                     className="relative px-6 py-2.5 text-sm font-bold transition-all duration-300 group outline-none"
                                 >
                                     <span className={`relative z-10 block transform transition-all duration-300 ease-out 
-                                        ${isActive ? "-translate-y-1 text-[#1aa5c3]" : "text-slate-600 group-hover:-translate-y-1 group-hover:text-[#1aa5c3]"}`}>
+                                        ${isActive ? "-translate-y-1 text-[#85bc44]" : "text-slate-600 group-hover:-translate-y-1 group-hover:text-[#85bc44]"}`}>
                                         {item.name}
                                     </span>
 
@@ -93,7 +93,7 @@ const Navbar = () => {
                                         ${isActive ? "scale-100 opacity-100" : "scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100"}`}>
                                     </span>
 
-                                    <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#1aa5c3] rounded-full transition-all duration-300
+                                    <span className={`absolute bottom-1.5 left-1/2 -translate-x-1/2 w-1 h-1 bg-[#85bc44] rounded-full transition-all duration-300
                                         ${isActive ? "scale-100" : "scale-0 group-hover:scale-100 delay-100"}`}>
                                     </span>
                                 </Link>

@@ -13,21 +13,21 @@ const Hero = () => {
 
                 {/* Left Content */}
                 <div className="space-y-8 text-center lg:text-left">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#186f86] animate-fade-in">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#85bc44] animate-fade-in">
                         <span className="relative flex h-3 w-3">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#186f86] opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-3 w-3 bg-[#186f86]"></span>
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#85bc44] opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-[#85bc44]"></span>
                         </span>
                         <span className="text-xs font-bold uppercase tracking-widest">Premium Living in Uttara</span>
                     </div>
 
                     <h1 className="text-5xl lg:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight">
-                        Find Your <span className="text-[#1aa5c3] italic">Vision</span> <br />
+                        Find Your <span className="text-[#85bc44] italic">Vision</span> <br />
                         of a Perfect Stay
                     </h1>
 
                     <p className="text-lg text-slate-600 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                        Experience luxury, security, and comfort all in one place. Specifically designed for students and professionals in the heart of Dhaka.
+                        Environment friendly, security, and comfort all in one place. Specifically designed for students and professionals in the heart of Dhaka.
                     </p>
 
                     {/* Modern Search Bar */}
@@ -62,7 +62,7 @@ const Hero = () => {
                         </div>
                         <div className="w-px h-10 bg-slate-200"></div>
                         <div>
-                            <p className="text-2xl font-black text-slate-900">4.5/5</p>
+                            <p className="text-2xl font-black text-slate-900">4.6/5</p>
                             <p className="text-xs font-bold text-slate-400 uppercase tracking-tighter">Google Reviews</p>
                         </div>
                     </div>

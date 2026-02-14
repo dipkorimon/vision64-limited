@@ -65,12 +65,12 @@ const Testimonials = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#1aa5c3] text-[10px] font-black uppercase tracking-[0.2em] mb-4 shadow-sm border border-blue-50"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1aa5c3]/10 border border-[#1aa5c3]/20 text-[#85bc44] text-[10px] font-black uppercase tracking-[0.2em] mb-4 shadow-sm"
                     >
-                        <Star className="w-3 h-3 fill-[#1aa5c3]" /> Real Student Stories
+                        <Star className="w-3 h-3 fill-[#85bc44]" /> Real Student Stories
                     </motion.div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-6">
-                        What Our <span className="text-[#1aa5c3]">Residents Say</span>
+                        What Our <span className="text-[#85bc44]">Residents Say</span>
                     </h2>
                 </div>
 
@@ -84,7 +84,7 @@ const Testimonials = () => {
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
                             whileHover={{ y: -10 }}
-                            className="bg-white p-8 rounded-[2.5rem] border-2 border-slate-100 shadow-sm hover:shadow-2xl hover:border-blue-200 transition-all duration-500 group relative cursor-pointer"
+                            className="flex flex-col min-h-[320px] bg-white p-8 rounded-[2.5rem] border-2 border-slate-100 shadow-sm hover:shadow-2xl hover:border-blue-200 transition-all duration-500 group relative cursor-pointer"
                         >
                             {/* Quote Icon */}
                             <div className="absolute top-8 right-8 text-slate-50 group-hover:text-blue-50 transition-colors">
@@ -98,12 +98,14 @@ const Testimonials = () => {
                                 ))}
                             </div>
 
-                            {/* Comment */}
-                            <p className="text-slate-600 font-bold text-md leading-relaxed mb-8 relative z-10">
-                                "{review.comment}"
-                            </p>
+                            {/* 2. Added 'flex-grow' here to push the profile section down */}
+                            <div className="flex-grow">
+                                <p className="text-slate-600 font-bold text-md leading-relaxed mb-8 relative z-10">
+                                    "{review.comment}"
+                                </p>
+                            </div>
 
-                            {/* Profile */}
+                            {/* 3. Profile Section - Now strictly at the bottom */}
                             <div className="flex items-center gap-4 mt-auto border-t border-slate-50 pt-6">
                                 <div className="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center text-[#1aa5c3]">
                                     <UserCircle2 className="w-8 h-8" />
@@ -128,7 +130,7 @@ const Testimonials = () => {
                 >
                     <div className="inline-block p-8 rounded-[3rem] bg-slate-900 text-white">
                         <p className="text-slate-400 font-bold mb-2 uppercase tracking-widest text-[10px]">Trusted by Hundreds</p>
-                        <h4 className="text-2xl font-black">4.5/5 Average Rating on Google Maps</h4>
+                        <h4 className="text-2xl font-black">4.6/5 Average Rating on Google Maps</h4>
                     </div>
                 </motion.div>
             </div>
