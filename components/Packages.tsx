@@ -171,26 +171,34 @@ Please let me know the availability and booking process. Thank you!`;
                             )}
 
                             <div>
-                                <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-[#85bc44] mb-6 group-hover:bg-[#85bc44] group-hover:text-white transition-all duration-500">
+                                <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center text-[#85bc44] mb-2 group-hover:bg-[#85bc44] group-hover:text-white transition-all duration-500">
                                     {pkg.icon}
                                 </div>
                                 <h4 className="text-slate-900 text-xl font-black mb-1 tracking-tight">{pkg.name}</h4>
-                                <p className="text-slate-500 text-[11px] leading-snug mb-6 h-8 line-clamp-2 font-medium">{pkg.room}</p>
+                                <p className="text-slate-500 text-[11px] leading-snug mb-1 h-8 line-clamp-2 font-medium">{pkg.room}</p>
 
-                                <div className="mb-6 p-4 bg-slate-50 rounded-2xl border border-slate-100 group-hover:bg-white group-hover:border-[#1aa5c3]/20 transition-colors">
-                                    <div className="flex items-baseline gap-2">
-                                        <span className="text-3xl font-black text-slate-900 font-mono">৳{pkg.price}</span>
+                                <div className="mb-3 p-4 bg-slate-50 rounded-2xl border border-slate-100 group-hover:bg-white group-hover:border-[#1aa5c3]/20 transition-all duration-300">
+                                    {/* Price Section */}
+                                    <div className="flex items-baseline gap-2 mb-2">
+                                        <span className="text-3xl font-black text-slate-900 font-mono tracking-tighter">৳{pkg.price}</span>
                                         <span className="text-slate-400 line-through text-xs italic">৳{pkg.originalPrice}</span>
                                     </div>
-                                    <p className="text-[10px] text-[#1aa5c3] font-bold mt-1 uppercase tracking-tighter">
-                                        Admin Charge: ৳{pkg.admin_charge}
-                                    </p>
-                                    <p className="text-[10px] text-[#1aa5c3] font-bold mt-1 uppercase tracking-tighter">
-                                        Refundable: ৳{pkg.refundable}
-                                    </p>
+
+                                    {/* Fees Section - Tags Style */}
+                                    <div className="flex flex-col gap-1.5">
+                                        <div className="flex items-center justify-between px-3 py-1.5 bg-[#1aa5c3]/5 border border-[#1aa5c3]/10 rounded-lg group-hover:bg-[#1aa5c3]/10 transition-colors">
+                                            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Admin Charge</span>
+                                            <span className="text-xs font-black text-[#1aa5c3]">৳{pkg.admin_charge}</span>
+                                        </div>
+
+                                        <div className="flex items-center justify-between px-3 py-1.5 bg-[#85bc44]/5 border border-[#85bc44]/10 rounded-lg group-hover:bg-[#85bc44]/10 transition-colors">
+                                            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Refundable</span>
+                                            <span className="text-xs font-black text-[#85bc44]">৳{pkg.refundable}</span>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <ul className="space-y-3 mb-8">
+                                <ul className="space-y-3 mb-4">
                                     {['3 Times Food', '30+ Facilities', 'High Speed Wifi'].map((feat, i) => (
                                         <li key={i} className="flex items-center gap-2 text-slate-600 text-xs font-semibold">
                                             <div className="w-4 h-4 rounded-full bg-green-100 flex items-center justify-center">
