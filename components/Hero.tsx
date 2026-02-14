@@ -1,6 +1,6 @@
 "use client";
 import Image from 'next/image';
-import { Search, MapPin, Home } from 'lucide-react';
+import { Search, MapPin, Home, ArrowRight } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -30,28 +30,58 @@ const Hero = () => {
                         Environment friendly, security, and comfort all in one place. Specifically designed for students and professionals in the heart of Dhaka.
                     </p>
 
-                    {/* Modern Search Bar */}
-                    <div className="relative max-w-2xl bg-white p-2 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 flex flex-col md:flex-row items-center gap-2">
-                        <div className="flex-1 flex items-center gap-3 px-4 py-2 border-r border-slate-100 last:border-0 w-full">
-                            <MapPin className="text-[#1aa5c3]" size={20} />
+                    {/* --- Interactive Action Bar (Replaced Search) --- */}
+                    <div className="relative max-w-2xl bg-white p-2 rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.06)] border border-slate-100 flex flex-col md:flex-row items-center gap-2">
+
+                        {/* Location Info */}
+                        <div className="flex-1 flex items-center gap-4 px-3 py-3 md:border-r border-slate-100 w-full group cursor-default">
+                            <div className="p-2.5 bg-slate-50 rounded-2xl group-hover:bg-[#85bc44]/10 transition-colors duration-300">
+                                <MapPin className="text-[#85bc44]" size={22} />
+                            </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] uppercase font-bold text-slate-400">Location</span>
-                                <input type="text" placeholder="Uttara Sector 10" className="text-sm font-semibold text-slate-800 outline-none w-full bg-transparent" />
+                                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Our Location</span>
+                                <span className="text-[15px] font-bold text-slate-800">Uttara Sector 10</span>
                             </div>
                         </div>
-                        <div className="flex-1 flex items-center gap-3 px-4 py-2 w-full">
-                            <Home className="text-[#1aa5c3]" size={20} />
+
+                        {/* Quick Info / Availability */}
+                        <div className="flex-1 flex items-center gap-4 px-3 py-3 w-full group cursor-default">
+                            <div className="p-2.5 bg-slate-50 rounded-2xl group-hover:bg-[#1aa5c3]/10 transition-colors duration-300">
+                                <div className="relative">
+                                    <Home className="text-[#1aa5c3]" size={22} />
+                                    <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-600 border-2 border-white rounded-full animate-pulse"></span>
+                                </div>
+                            </div>
                             <div className="flex flex-col">
-                                <span className="text-[10px] uppercase font-bold text-slate-400">Room Type</span>
-                                <select className="text-sm font-semibold text-slate-800 outline-none w-full bg-transparent appearance-none">
-                                    <option>Single Deluxe</option>
-                                    <option>Shared Suite</option>
-                                </select>
+                                <span className="text-[10px] uppercase font-bold text-slate-400 tracking-widest">Status</span>
+                                <span className="text-[15px] font-bold text-slate-800">Seats Available</span>
                             </div>
                         </div>
-                        {/* Search button matches your theme now */}
-                        <button className="bg-[#186f86] hover:bg-[#186f86] text-white p-4 rounded-2xl transition-all shadow-lg shadow-[#186f86]/20 group w-full md:w-auto flex justify-center cursor-pointer">
-                            <Search size={22} className="group-hover:scale-110 transition-transform" />
+
+                        {/* Scroll to Packages Button */}
+                        <button
+                            onClick={() => {
+                                const elem = document.getElementById('packages');
+                                if (elem) {
+                                    const offset = 100;
+                                    const elementPosition = elem.getBoundingClientRect().top + window.pageYOffset;
+                                    window.scrollTo({
+                                        top: elementPosition - offset,
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }}
+                            className="relative py-3 px-3 bg-[#1aa5c3] text-white rounded-2xl flex items-center justify-center gap-3 overflow-hidden group transition-all duration-300 shadow-[0_10px_20px_rgba(26,165,195,0.2)] hover:shadow-[0_15px_30px_rgba(26,165,195,0.4)] hover:-translate-y-0.5 active:scale-95 w-full md:w-auto cursor-pointer"
+                        >
+                            {/* Background Hover Slide Effect */}
+                            <div className="absolute inset-0 bg-[#85bc44] translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"></div>
+
+                            <div className="relative z-10 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
+                                <ArrowRight size={20} />
+                            </div>
+
+                            {/* Subtle Glow Overlay */}
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-white/0 via-white/10 to-white/0"></div>
                         </button>
                     </div>
 
