@@ -5,6 +5,7 @@ import FoodMenu from "@/components/FoodMenu";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
+import {VideoGallery} from "@/components/VideoGallery";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Amenities />
       <FoodMenu />
       <Gallery />
+      <VideoGallery/>
       <Testimonials />
       <Contact />
     </>
