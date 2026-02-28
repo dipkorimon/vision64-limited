@@ -80,22 +80,22 @@ const Footer = () => {
                         <h4 className="text-lg font-bold mb-6 text-white uppercase tracking-widest text-xs">Get In Touch</h4>
                         <div className="space-y-4">
                             <div className="flex items-start gap-4 text-slate-400">
-                                <MapPin size={20} className="text-blue-500 mt-1 shrink-0" />
+                                <MapPin size={20} className="text-[#1aa5c3] mt-1 shrink-0" />
                                 <span className="text-sm leading-relaxed">
                                     House 23, Road 11, Sector 10<br />
                                     Uttara, Dhaka-1230, Bangladesh
                                 </span>
                             </div>
                             <div className="flex items-center gap-4 text-slate-400">
-                                <Phone size={20} className="text-blue-500 shrink-0" />
+                                <Phone size={20} className="text-[#1aa5c3] shrink-0" />
                                 <span className="text-sm">+880 1328 960996</span>
                             </div>
                             <div className="flex items-center gap-4 text-slate-400">
-                                <Phone size={20} className="text-blue-500 shrink-0" />
+                                <Phone size={20} className="text-[#1aa5c3] shrink-0" />
                                 <span className="text-sm">+880 1985 698402</span>
                             </div>
                             <div className="flex items-center gap-4 text-slate-400">
-                                <Mail size={20} className="text-blue-500 shrink-0" />
+                                <Mail size={20} className="text-[#1aa5c3] shrink-0" />
                                 <span className="text-sm">vision64hostel@gmail.com</span>
                             </div>
                         </div>
