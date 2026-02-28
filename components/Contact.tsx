@@ -56,19 +56,19 @@ const Contact = () => {
                     <div className="lg:col-span-8 h-[500px]">
                         <div className="w-full h-full rounded-[3rem] overflow-hidden border-8 border-slate-50 shadow-2xl relative group">
                             <iframe
-                                src={mapSrc}
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.2345!2d90.3869!3d23.8843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c51917838e0b%3A0x9a2ab5b29dd1c3ac!2sVision64%20Limited!5e0!3m2!1sen!2sbd!4v1715000000000!5m2!1sen!2sbd"
                                 width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
+                                height="550"
+                                allowFullScreen=""
                                 loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                className="grayscale hover:grayscale-0 transition-all duration-1000 contrast-[1.1]"
-                            ></iframe>
+                                referrerPolicy="no-referrer-when-downgrade">
+                            </iframe>
 
                             {/* Overlay Badge */}
-                            <div className="absolute top-6 left-6 right-6 flex justify-between items-center pointer-events-none">
-                                <div className="bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl border border-white/50">
+                            <div
+                                className="absolute top-6 left-6 right-6 flex justify-between items-center pointer-events-none">
+                                <div
+                                    className="bg-white/90 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl border border-white/50">
                                     <p className="text-[10px] font-black text-[#85bc44] uppercase tracking-widest">Marked Location</p>
                                     <p className="text-sm font-black text-slate-900">Vision64 Limited (House-23)</p>
                                 </div>
