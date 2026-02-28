@@ -105,7 +105,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="mt-20 pt-8 border-t border-slate-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-500 text-xs">
-                        © {new Date().getFullYear()} <span className="text-slate-300 font-semibold">Vision64 Limited</span>. All rights reserved.
+                        © 2023 - {new Date().getFullYear()} <span className="text-slate-300 font-semibold">Vision64 Limited</span>. All rights reserved.
                     </p>
                     <div className="flex items-center gap-6">
                         <span className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Designed for Excellence</span>
