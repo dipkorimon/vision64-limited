@@ -192,7 +192,7 @@ Please let me know the availability and booking process. Thank you!`;
                                         </div>
 
                                         <div className="flex items-center justify-between px-3 py-1.5 bg-[#85bc44]/5 border border-[#85bc44]/10 rounded-lg group-hover:bg-[#85bc44]/10 transition-colors">
-                                            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Refundable</span>
+                                            <span className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Advance Money</span>
                                             <span className="text-xs font-black text-[#85bc44]">৳{pkg.refundable}</span>
                                         </div>
                                     </div>
