@@ -71,7 +71,7 @@ export const VideoGallery: React.FC = () => {
                 {/* --- Header Section --- */}
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 gap-6">
                     <div className="max-w-2xl">
-                        <div className="flex items-center gap-2 text-[#1aa5c3] font-bold uppercase tracking-[0.2em] text-xs mb-4">
+                        <div className="flex items-center gap-2 text-[#1aa5c3] font-bold uppercase tracking-[0.2em] text-lg mb-4">
                             <span className="w-10 h-[2px] bg-[#1aa5c3]"></span>
                             Virtual Tour
                         </div>

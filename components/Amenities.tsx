@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Wifi, ShieldCheck, Utensils, WashingMachine, Zap,
@@ -45,7 +45,10 @@ const Amenities = () => {
                 {/* Header Section */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                     <div className="max-w-2xl">
-                        <h2 className="text-[#85bc44] font-black text-4xl uppercase tracking-[0.3em] mb-3">Facilities</h2>
+                        <div className="flex items-center gap-2 text-[#1aa5c3] font-bold uppercase tracking-[0.2em] text-lg mb-4">
+                            <span className="w-10 h-[2px] bg-[#1aa5c3]"></span>
+                            Facilities
+                        </div>
                         <h3 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter">
                             Everything You Need for a <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#85bc44] to-[#b4d98c]">Better Lifestyle</span>
