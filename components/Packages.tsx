@@ -116,7 +116,8 @@ Package Details:
 📌 Name: ${pkg.name}
 🏠 Room: ${pkg.room}
 💵 Price: ৳${pkg.price}
-💰 Refundable: ৳${pkg.refundable}
+💰 Admin charge: ৳${pkg.admin_charge}
+💰 Advance Money: ৳${pkg.refundable}
 
 Please let me know the availability and booking process. Thank you!`;
 
